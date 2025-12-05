@@ -1,12 +1,9 @@
-import cliffs from "./cliffs.png";
-import flowers from "./flowers.jpg";
-import little from "./little.jpg"
+
+import shabnambano from "./shabnambano.jpg"
 
 
 export const assets={
-    cliffs,
-    flowers,
-    little
+    shabnambano,
 
 }
 // ✅ Work Experience Data
@@ -34,20 +31,19 @@ export const experienceData = [
 // ✅ Education Data
 export const educationData = [
   {
-    timeline: "2021 – 2023",
+    timeline: "2023 – 2025",
     degree: "Master of Computer Applications (MCA)",
-    institution: "ABC University",
-    location: "Bangalore, India",
-    description: `Specialized in Web Development and Cloud Computing.
+    institution: "APSU University",
+    location: "REWA, India",
+    description: `Specialized in Web Development.
     Built multiple academic projects using Node.js and React.`
   },
   {
-    timeline: "2018 – 2021",
-    degree: "Bachelor of Science (Computer Science)",
-    institution: "XYZ College",
-    location: "Indore, India",
-    description: `Graduated with distinction (8.9 CGPA).
-    Participated in hackathons and won 1st place in coding competition.`
+    timeline: "2019 – 2022",
+    degree: "BCA(Bachelor of Computer Applications)",
+    institution: "model science College",
+    location: "REWA , India",
+    description: `Graduated with A gread`
   }
 ];
 
@@ -69,7 +65,7 @@ export const projectsData = [
     techStack: ["React.js", "Node.js", "MongoDB", "Express.js"],
     description: `A web application for managing students and books.
     Features include login system, book issue/return, and student info management.`,
-    link: "https://github.com/username/library-management"
+    link: "https://library-management-4-9xk7.onrender.com"
   },
   {
     title: "Portfolio Website",
@@ -78,3 +74,11 @@ export const projectsData = [
     link: "https://username.github.io/portfolio"
   }
 ];
+
+export const projecImge=[
+  {
+    name:"SHABNAM BANO",
+    userImg:flowers,
+    usertittel:"MERN devoloper"
+  }
+]
