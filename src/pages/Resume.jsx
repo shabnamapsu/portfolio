@@ -1,105 +1,120 @@
 import React from "react";
-import { educationData, experienceData, projectsData, skillSets } from "../assets/assets.js";
+import { Link } from "react-router-dom";
+
+import {
+  educationData,
+  experienceData,
+  projectsData,
+  skillSets,
+} from "../assets/assets.js";
 
 function Resume() {
   return (
-    
-    <div className="w-full bg-white md:h-[140%]">
-      <div className="relative w-full min-h-screen">
-        {/* Left Sidebar */}
-        <div className="absolute left-0 md:h-[300%] w-full md:w-[25%] bg-gray-400 shadow-black">
-          
-        </div>
+    <div className="w-full bg-gray-100 min-h-screen flex justify-center py-10">
+      <div className="max-w-5xl w-full bg-white shadow-xl rounded-xl p-8">
+        <h1 className="text-3xl font-bold text-center mb-8">Resume</h1>
 
-        {/* Main Content */}
-        <div className="absolute md:left-20 w-full md:top-5 max-w-5xl py-20">
-          <div className="flex flex-col w-full md:flex-row gap-12">
-            <div className="flex flex-row w-2/2 bg-gray-500 max-h-1/2">
-              
-              {/* Resume Card */}
-              <div className="flex flex-col items-center mx-auto p-9 bg-white min-w-2/3 min-h-7 shadow-lg rounded-xl">
-                <h1 className="uppercase text-3xl text-black font-bold mb-6">
-                  Resume
-                </h1>
+        {/* Education */}
+        <div className="mb-8">
+          <h2 className="text-xl font-semibold mb-4">🎓 Education</h2>
 
-                {/* 🎓 Education */}
-                <div className="w-full bg-blue-500 p-4 rounded-lg shadow mb-6">
-                  <h2 className="text-xl font-semibold mb-3">🎓 Education</h2>
-                  {educationData.map((edu, index) => (
-                    <div key={index} className="bg-white p-3 mb-3 rounded-lg shadow border-l-4 border-blue-600">
-                      <h3 className="text-lg font-bold">{edu.degree}</h3>
-                      <p className="text-gray-700">{edu.institution}, {edu.location}</p>
-                      <span className="text-sm text-gray-500">{edu.timeline}</span>
-                      <p className="text-gray-600 mt-2">{edu.description}</p>
-                    </div>
-                  ))}
-                </div>
-
-                {/* 💼 Experience */}
-                <div className="w-full bg-blue-500 p-4 rounded-lg shadow mb-6">
-                  <h2 className="text-xl font-semibold mb-3">💼 Experience</h2>
-                  {experienceData.map((exp, index) => (
-                    <div key={index} className="bg-white p-3 mb-3 rounded-lg shadow border-l-4 border-green-600">
-                      <h3 className="text-lg font-bold">{exp.position} - {exp.company}</h3>
-                      <p className="text-gray-700">{exp.location}</p>
-                      <span className="text-sm text-gray-500">{exp.timeline}</span>
-                      <p className="text-gray-600 mt-2">{exp.description}</p>
-                    </div>
-                  ))}
-                </div>
-
-                {/* 🛠 Skills */}
-                <div className="w-full bg-blue-500 p-4 rounded-lg shadow mb-6">
-                  <h2 className="text-xl font-semibold mb-3">🛠 Skills</h2>
-                  <ul className="grid grid-cols-2 gap-2">
-                    {skillSets.map((skill, index) => (
-                      <li key={index} className="bg-white p-2 rounded shadow text-center">
-                        {skill}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                {/* 🚀 Projects */}
-                <div className="w-full bg-blue-500 p-4 rounded-lg shadow mb-6">
-                  <h2 className="text-xl font-semibold mb-3">🚀 Projects</h2>
-                  {projectsData.map((project, index) => (
-                    <div key={index} className="bg-white p-3 mb-3 rounded-lg shadow border-l-4 border-purple-600">
-                      <h3 className="text-lg font-bold">{project.title}</h3>
-                      <p className="text-gray-700">{project.description}</p>
-                      <p className="text-sm text-gray-500">Tech Stack: {project.techStack.join(", ")}</p>
-                      <a href={project.link} target="_blank" rel="noopener noreferrer" className="text-blue-600 underline">
-                        🔗 View Project
-                      </a>
-                    </div>
-                  ))}
-                </div>
-
-                {/* ✅ View + Download Buttons */}
-                <div className="flex gap-4 mt-8">
-                  <a
-                    href="/Shabnam_Resume.pdf"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="bg-green-600 text-white px-6 py-3 rounded-full shadow-lg hover:bg-white hover:text-green-600 border-2 border-green-600 transition"
-                  >
-                    👀 View Resume
-                  </a>
-                  <a
-                    href="/Shabnam_Resume.pdf"
-                    download
-                    className="bg-blue-600 text-white px-6 py-3 rounded-full shadow-lg hover:bg-white hover:text-blue-600 border-2 border-blue-600 transition"
-                  >
-                    ⬇ Download Resume
-                  </a>
-                </div>
-
-              </div>
-
+          {educationData.map((edu, index) => (
+            <div
+              key={index}
+              className="bg-gray-50 p-4 mb-4 rounded-lg shadow border-l-4 border-blue-500"
+            >
+              <h3 className="font-bold text-lg">{edu.degree}</h3>
+              <p className="text-gray-700">
+                {edu.institution}, {edu.location}
+              </p>
+              <span className="text-sm text-gray-500">{edu.timeline}</span>
+              <p className="text-gray-600 mt-2">{edu.description}</p>
             </div>
-          </div>
+          ))}
         </div>
 
+        {/* Experience */}
+        <div className="mb-8">
+          <h2 className="text-xl font-semibold mb-4">💼 Experience</h2>
+
+          {experienceData.map((exp, index) => (
+            <div
+              key={index}
+              className="bg-gray-50 p-4 mb-4 rounded-lg shadow border-l-4 border-green-500"
+            >
+              <h3 className="font-bold text-lg">
+                {exp.position} - {exp.company}
+              </h3>
+              <p className="text-gray-700">{exp.location}</p>
+              <span className="text-sm text-gray-500">{exp.timeline}</span>
+              <p className="text-gray-600 mt-2">{exp.description}</p>
+            </div>
+          ))}
+        </div>
+
+        {/* Skills */}
+        <div className="mb-8">
+          <h2 className="text-xl font-semibold mb-4">🛠 Skills</h2>
+
+          <ul className="grid grid-cols-2 md:grid-cols-3 gap-3">
+            {skillSets.map((skill, index) => (
+              <li
+                key={index}
+                className="bg-gray-100 p-2 rounded text-center shadow"
+              >
+                {skill}
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Projects */}
+        <div className="mb-8">
+          <h2 className="text-xl font-semibold mb-4">🚀 Projects</h2>
+
+          {projectsData.map((project, index) => (
+            <div
+              key={index}
+              className="bg-gray-50 p-4 mb-4 rounded-lg shadow border-l-4 border-purple-500"
+            >
+              <h3 className="font-bold text-lg">{project.title}</h3>
+              <p className="text-gray-700">{project.description}</p>
+
+              <p className="text-sm text-gray-500">
+                Tech Stack: {project.techStack.join(", ")}
+              </p>
+
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 underline"
+              >
+                🔗 View Project
+              </a>
+            </div>
+          ))}
+        </div>
+
+        {/* Buttons */}
+        <div className="flex justify-center gap-4 mt-6">
+          {/* View Resume */}
+          <Link
+            to="/viewresume"
+            className="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700"
+          >
+            👀 View Resume
+          </Link>
+
+          {/* Download Resume */}
+          <a
+            href="/sb.pdf"
+            download
+            className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700"
+          >
+            ⬇ Download Resume
+          </a>
+        </div>
       </div>
     </div>
   );

@@ -8,30 +8,31 @@ export const assets={
 }
 // ✅ Work Experience Data
 export const experienceData = [
-  {
-    timeline: "Feb 2022 – Present",
-    position: "Full Stack Developer",
-    company: "CodeCrafters Pvt Ltd",
-    location: "Hyderabad, India",
-    description: `Working on MERN stack applications, building scalable APIs,
-    and implementing responsive UI with React.js.
-    Improved application performance by 25% using optimized queries and caching.`
-  },
-  {
-    timeline: "Aug 2020 – Jan 2022",
-    position: "Frontend Developer",
-    company: "NextGen Technologies",
-    location: "Mumbai, India",
-    description: `Developed modern UI components with React.js and Redux.
-    Collaborated with backend team for API integration.
-    Enhanced user engagement by redesigning dashboards and forms.`
-  }
+{
+  timeline: "Jan 2025 – Jul 2025",
+  position: "MERN Stack Developer Intern",
+  company: "NTI Company",
+  location: "Rewa, India",
+  description: `Gained hands-on experience in MERN stack development including MongoDB, Express.js, React.js and Node.js.
+  Worked on developing a Library Management System with features like student registration, book issue and return management.
+  Implemented RESTful APIs using Express.js and MongoDB with Mongoose.
+  Built responsive user interfaces using React.js and integrated frontend with backend APIs.`
+},
+{
+  timeline: "2024 – 2025",
+  position: "Frontend Developer (Academic Project)",
+  company: "APSU University",
+  location: "Rewa, India",
+  description: `Developed frontend components for a Library Management System project.
+  Implemented CRUD operations, form validation and dynamic table display using JavaScript and React.js.
+  Integrated backend APIs using fetch for real-time data handling.`
+}
 ];
 
 // ✅ Education Data
 export const educationData = [
   {
-    timeline: "2023 – 2025",
+    timeline: "2024 – 2025",
     degree: "Master of Computer Applications (MCA)",
     institution: "APSU University",
     location: "REWA, India",
@@ -78,7 +79,7 @@ export const projectsData = [
 export const projecImge=[
   {
     name:"SHABNAM BANO",
-    userImg:flowers,
+    userImg:shabnambano,
     usertittel:"MERN devoloper"
   }
 ]
